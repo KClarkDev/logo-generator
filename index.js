@@ -44,9 +44,10 @@ function generateSVGContent(data) {
   // Instantiate the class with the provided data
   const logoShape = new logoClass(
     data.textColor,
-    data.shapeColor,
+    data.logoColor,
     data.logoText
   );
+
   return logoShape.render();
 }
 
