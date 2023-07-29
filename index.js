@@ -10,13 +10,14 @@ const questions = [
     type: "input",
     name: "logoText",
     message: "Enter the LOGO TEXT (Provide no more than three characters)\n",
-    // validate: (input) => {
-    //   // Check if the input length is less than or equal to 3 characters
-    //   if (input.length <= 3) {
-    //     return true; // Input is valid
-    //   } else {
-    //     return 'Input must be 3 characters or less.'; // Invalid input message
-    //   }
+    validate: (input) => {
+      // Check if the input length is less than or equal to 3 characters
+      if (input.length <= 3) {
+        return true; // Input is valid
+      } else {
+        return "Input must be 3 characters or less. Please edit your response."; // Invalid input message
+      }
+    },
   },
   {
     type: "input",
@@ -62,7 +63,7 @@ function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) =>
     err
       ? console.log(err)
-      : console.log("SVG file generated and saved as 'logo.svg'")
+      : console.log("SVG file generated and saved as 'logo.svg' in /examples")
   );
 }
 
