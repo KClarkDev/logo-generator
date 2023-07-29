@@ -9,24 +9,30 @@ const questions = [
   {
     type: "input",
     name: "logoText",
-    message:
-      "What is the text for the logo? (Provide no more than three characters)\n",
+    message: "Enter the LOGO TEXT (Provide no more than three characters)\n",
+    // validate: (input) => {
+    //   // Check if the input length is less than or equal to 3 characters
+    //   if (input.length <= 3) {
+    //     return true; // Input is valid
+    //   } else {
+    //     return 'Input must be 3 characters or less.'; // Invalid input message
+    //   }
   },
   {
     type: "input",
     name: "textColor",
-    message: "What should the color of the text be?\n",
+    message: "Enter the TEXT COLOR as a keyword or hexcode\n",
   },
   {
     type: "list",
     name: "logoShape",
-    message: "What shape do you want the logo to be?",
+    message: "Choose the LOGO SHAPE",
     choices: ["Square", "Circle", "Triangle"],
   },
   {
     type: "input",
     name: "logoColor",
-    message: "What should the color of the logo be?\n",
+    message: "Enter the LOGO COLOR as a keyword or hexcode\n",
   },
 ];
 
